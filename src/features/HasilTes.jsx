@@ -87,11 +87,13 @@ const HasilTes = () => {
             </TableBody>
           </Table>
         </TableContainer>
-<PDFDownloadLink document={<PrintData />} fileName="somename.pdf">
-      {({ blob, url, loading, error }) =>
-        loading ? 'Loading document...' : 'Download now!'
-      }
-    </PDFDownloadLink>
+ <PDFViewer width={"50%"}>
+          <PrintData
+            person={personData}
+            papikostik={papikostikData}
+            aptitude={aptitudeData}
+          />
+        </PDFViewer>
       </Box>
     </>
   );
